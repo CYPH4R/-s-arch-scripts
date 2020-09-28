@@ -11,3 +11,9 @@ mount /dev/sda1 /mnt
 swapon /dev/sda2
 pacstrap /mnt base base-devel linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
+arch-chroot /mnt
+ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+hwclock --systohc
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
+locale-gen
+echo "KEYMAP=de-latin1" > /etc/vconsole.conf
