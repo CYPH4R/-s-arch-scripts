@@ -12,3 +12,4 @@ echo "ThinkPad" > /etc/hostname
 printf "127.0.0.1\t localhost\n::1 \t \t localhost\n127.0.1.1\t ThinkPad.localdomain Thinkpad" > /etc/hosts
 grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
+passwd
