@@ -15,3 +15,4 @@ grub-mkconfig -o /boot/grub/grub.cfg
 passwd
 useradd -aG wheel cypher
 passwd cypher
+sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
