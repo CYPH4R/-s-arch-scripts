@@ -8,5 +8,6 @@ mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt
 pacstrap /mnt base base-devel linux linux-firmware vim git
 genfstab -U /mnt >> /mnt/etc/fstab
-cp scripts/lazy.sh /mnt/lazy.sh
-arch-chroot /mnt ./lazy.sh
+cp ./lazy.bash /mnt/lazy.bash
+chmod +x /mnt/lazy.bash
+arch-chroot /mnt ./lazy.bash
