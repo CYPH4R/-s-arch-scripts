@@ -6,13 +6,6 @@
 parted -s /dev/sda mklabel msdos mkpart primary ext4 0% 100% set 1 boot on
 mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt
-pacstrap /mnt base base-devel linux linux-firmware vim
+pacstrap /mnt base base-devel linux linux-firmware vim git
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
-ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
-hwclock --systohc
-echo "LANG=en_US.UTF-8" > /etc/locale.conf
-locale-gen
-echo "KEYMAP=de-latin1" > /etc/vconsole.conf
-echo "ThinkPad" > /etc/hosname
-echo -e "127.0.0.1\t localhost" "::1 \t \t localhost" "127.0.1.1\t ThinkPad.localdomain Thinkpad" > /etc/hosts
