@@ -14,3 +14,5 @@ hwclock --systohc
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 locale-gen
 echo "KEYMAP=de-latin1" > /etc/vconsole.conf
+echo "ThinkPad" > /etc/hosname
+echo -e "127.0.0.1\t localhost" "::1 \t \t localhost" "127.0.1.1\t ThinkPad.localdomain Thinkpad" > /etc/hosts
