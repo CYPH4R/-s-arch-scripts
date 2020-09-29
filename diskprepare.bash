@@ -11,3 +11,5 @@ genfstab -U /mnt >> /mnt/etc/fstab
 cp ./lazy.bash /mnt/lazy.bash
 chmod +x /mnt/lazy.bash
 arch-chroot /mnt ./lazy.bash
+umount -af
+reboot
