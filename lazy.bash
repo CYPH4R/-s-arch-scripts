@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Hands-free bash script for installing most non core Arch packages for quick setups.
 # Also sets up main user with home directory, wheel group for sudo, and basic xorg/X11 configuration.
