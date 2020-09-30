@@ -20,3 +20,6 @@ passwd
 useradd -mG wheel cypher
 passwd cypher
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
+#su cypher
+#head -n -5 /etc/X11/xinit/xinitrc > /home/cypher/.xinitrc
+#printf "nitrogen --restore &" >> /home/cypher/.xinitrc
