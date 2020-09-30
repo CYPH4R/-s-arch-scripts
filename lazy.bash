@@ -3,10 +3,7 @@
 # Hands-free bash script for installing most non core Arch packages for quick setups.
 # Also sets up main user with home directory, wheel group for sudo, and basic xorg/X11 configuration.
 
-git clone https://aur.archlinux.org/yay-git.git
-cd yay-git/
-makepkg -si
-cd
+
 ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 hwclock --systohc
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
@@ -21,6 +18,10 @@ useradd -mG wheel cypher
 passwd cypher
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 su cypher
+git clone https://aur.archlinux.org/yay-git.git
+cd yay-git/
+makepkg -si
+cd
 head -n -5 /etc/X11/xinit/xinitrc > /home/cypher/.xinitrc
 printf "nitrogen --restore &\npicom &\nexec alacritty" >> /home/cypher/.xinitrc
 exit
