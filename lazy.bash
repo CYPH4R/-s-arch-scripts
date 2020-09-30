@@ -16,7 +16,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 passwd
 useradd -mG wheel cypher
 passwd cypher
-sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
+sed -i "s/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/" /etc/sudoers
+printf "Defaults insults" >> /etc/sudoers
 su cypher
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git/
