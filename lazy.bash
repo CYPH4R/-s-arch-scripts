@@ -3,6 +3,10 @@
 # Hands-free bash script for installing most non core Arch packages for quick setups.
 # Also sets up main user with home directory, wheel group for sudo, and basic xorg/X11 configuration.
 
+git clone https://aur.archlinux.org/yay-git.git
+cd yay-git/
+makepkg -si
+cd
 ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 hwclock --systohc
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
