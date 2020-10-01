@@ -17,6 +17,7 @@ passwd
 useradd -mG wheel cypher
 passwd cypher
 sed -i "s/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/" /etc/sudoers
+sed -i "s/# Defaults!REBOOT !log_output/# Defaults!REBOOT !log_output\nDefaults insults" /etc/sudoers
 printf "Defaults insults" >> /etc/sudoers
 git clone https://aur.archlinux.org/yay-git.git /home/cypher/yay-git
 chmod -v a+rwx /home/cypher/yay-git
