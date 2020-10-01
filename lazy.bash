@@ -6,7 +6,7 @@
 
 ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 hwclock --systohc
-sed -i "s/#LANG=en_US.UTF-8 UTF-8/LANG=en_US.UTF-8 UTF-8/" /etc/locale.conf
+sed -i "s/#LANG=en_US.UTF-8 UTF-8/LANG=en_US.UTF-8 UTF-8/" /etc/locale.gen
 locale-gen
 printf "KEYMAP=de-latin1" > /etc/vconsole.conf
 printf "ThinkPad" > /etc/hostname
@@ -24,4 +24,4 @@ su -c "cd /home/yay-git/ && makepkg -si" cypher
 yay -S spectrwm
 head -n -5 /etc/X11/xinit/xinitrc > /home/cypher/.xinitrc
 printf "nitrogen --restore &\npicom &\nexec spectrwm" >> /home/cypher/.xinitrc
-#exit
+exit
