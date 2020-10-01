@@ -21,6 +21,7 @@ sed -i "s/# Defaults!REBOOT !log_output/# Defaults!REBOOT !log_output\nDefaults 
 git clone https://aur.archlinux.org/yay-git.git /home/cypher/yay-git
 chmod -v a+rwx /home/cypher/yay-git
 su -c "cd /home/yay-git/ && makepkg -si" cypher
+yay -S spectrwm
 head -n -5 /etc/X11/xinit/xinitrc > /home/cypher/.xinitrc
-printf "nitrogen --restore &\npicom &\nexec alacritty" >> /home/cypher/.xinitrc
-exit
+printf "nitrogen --restore &\npicom &\nexec spectrwm" >> /home/cypher/.xinitrc
+#exit
