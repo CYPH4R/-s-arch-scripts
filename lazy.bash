@@ -20,8 +20,7 @@ sed -i "s/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/" /etc/sudoers
 sed -i "s/# Defaults!REBOOT !log_output/# Defaults!REBOOT !log_output\nDefaults insults/" /etc/sudoers
 git clone https://aur.archlinux.org/yay-git.git /home/cypher/yay-git
 chmod -v a+rwx /home/cypher/yay-git
-su -c "cd /home/yay-git/ && makepkg -si" cypher
-yay -S spectrwm
+su -c "cd ~/yay-git/ ; makepkg -si" cypher
 head -n -5 /etc/X11/xinit/xinitrc > /home/cypher/.xinitrc
 printf "nitrogen --restore &\npicom &\nexec spectrwm" >> /home/cypher/.xinitrc
 systemctl enable NetworkManager
