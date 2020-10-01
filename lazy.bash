@@ -24,4 +24,5 @@ su -c "cd /home/yay-git/ && makepkg -si" cypher
 yay -S spectrwm
 head -n -5 /etc/X11/xinit/xinitrc > /home/cypher/.xinitrc
 printf "nitrogen --restore &\npicom &\nexec spectrwm" >> /home/cypher/.xinitrc
+systemctl enable NetworkManager
 exit
