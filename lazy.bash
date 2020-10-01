@@ -22,6 +22,6 @@ git clone https://aur.archlinux.org/yay-git.git /home/cypher/yay-git
 chmod -v a+rwx /home/cypher/yay-git
 su -c "cd ~/yay-git/ ; makepkg -si" cypher
 head -n -5 /etc/X11/xinit/xinitrc > /home/cypher/.xinitrc
-printf "nitrogen --restore &\npicom &\nexec spectrwm" >> /home/cypher/.xinitrc
+printf "nitrogen --restore &\npicom &\nexec xmonad" >> /home/cypher/.xinitrc
 systemctl enable NetworkManager
 exit
