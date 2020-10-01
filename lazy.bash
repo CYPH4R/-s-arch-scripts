@@ -6,7 +6,7 @@
 
 ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 hwclock --systohc
-sed -i "s/#LANG=en_US.UTF-8/LANG=en_US.UTF-8" /etc/locale.conf
+sed -i "s/#LANG=en_US.UTF-8/LANG=en_US.UTF-8/" /etc/locale.conf
 locale-gen
 printf "KEYMAP=de-latin1" > /etc/vconsole.conf
 printf "ThinkPad" > /etc/hostname
@@ -17,7 +17,7 @@ passwd
 useradd -mG wheel cypher
 passwd cypher
 sed -i "s/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/" /etc/sudoers
-sed -i "s/# Defaults!REBOOT !log_output/# Defaults!REBOOT !log_output\nDefaults insults" /etc/sudoers
+sed -i "s/# Defaults!REBOOT !log_output/# Defaults!REBOOT !log_output\nDefaults insults/" /etc/sudoers
 git clone https://aur.archlinux.org/yay-git.git /home/cypher/yay-git
 chmod -v a+rwx /home/cypher/yay-git
 su -c "cd /home/yay-git/ && makepkg -si" cypher
