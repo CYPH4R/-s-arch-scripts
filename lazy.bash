@@ -6,7 +6,7 @@
 
 ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 hwclock --systohc
-sed -i "s/#LANG=en_US.UTF-8/LANG=en_US.UTF-8/" /etc/locale.conf
+sed -i "s/#LANG=en_US.UTF-8 UTF-8/LANG=en_US.UTF-8 UTF-8/" /etc/locale.conf
 locale-gen
 printf "KEYMAP=de-latin1" > /etc/vconsole.conf
 printf "ThinkPad" > /etc/hostname
