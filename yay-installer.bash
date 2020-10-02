@@ -3,4 +3,4 @@
 
 cd ~/yay-git/
 makepkg -si
-yay st
+yay -S st
