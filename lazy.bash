@@ -25,7 +25,7 @@ useradd -mG wheel cypher
 clear
 echo "Enter User Cypher Password"
 passwd cypher
-sed -i "s/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/" /etc/sudoers
+sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -i "s/# Defaults!REBOOT !log_output/# Defaults!REBOOT !log_output\nDefaults insults/" /etc/sudoers
 #Yay Download
 git clone https://aur.archlinux.org/yay-git.git /home/cypher/yay-git
@@ -39,7 +39,6 @@ printf "Section \"InputClass\"\n\tIdentifier \"system-keybaord\"\n\tMatchIsKeybo
 #Enable Automatic Networking
 systemctl enable NetworkManager
 #change sudoers back to use Password
-sed -i "s/%wheel ALL=(ALL) ALL/# %wheel ALL=(ALL) ALL/" /etc/sudoers
-sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
-
+sed -i "s/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/" /etc/sudoers
+sed -i "s/%wheel ALL=(ALL) NOPASSWD: ALL/# %wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 exit
