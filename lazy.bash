@@ -25,7 +25,7 @@ useradd -mG wheel cypher
 clear
 echo "Enter User Cypher Password"
 passwd cypher
-sed -i "s/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/" /etc/sudoers
+sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -i "s/# Defaults!REBOOT !log_output/# Defaults!REBOOT !log_output\nDefaults insults/" /etc/sudoers
 #Yay Download
 git clone https://aur.archlinux.org/yay-git.git /home/cypher/yay-git
@@ -35,6 +35,6 @@ su -c "cd ~/yay-git/ ; makepkg -si" cypher
 head -n -5 /etc/X11/xinit/xinitrc > /home/cypher/.xinitrc
 printf "nitrogen --restore &\npicom &\nexec xmonad" >> /home/cypher/.xinitrc
 printf "Section \"InputClass\"\n\tIdentifier \"system-keybaord\"\n\tMatchIsKeyboard \"on\"\n\tOption \"XkbLayout\" \"de\"\nEndSection" > /etc/X11/xorg.conf.d/00-keyboard.conf
-#Enable Automatic Networking 
+#Enable Automatic Networking
 systemctl enable NetworkManager
 exit
