@@ -38,4 +38,8 @@ printf "nitrogen --restore &\npicom &\nexec xmonad" >> /home/cypher/.xinitrc
 printf "Section \"InputClass\"\n\tIdentifier \"system-keybaord\"\n\tMatchIsKeyboard \"on\"\n\tOption \"XkbLayout\" \"de\"\nEndSection" > /etc/X11/xorg.conf.d/00-keyboard.conf
 #Enable Automatic Networking
 systemctl enable NetworkManager
+#change sudoers back to use Password
+sed -i "s/%wheel ALL=(ALL) ALL/# %wheel ALL=(ALL) ALL/" /etc/sudoers
+sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
+
 exit
