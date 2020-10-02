@@ -24,4 +24,5 @@ su -c "cd ~/yay-git/ ; makepkg -si" cypher
 head -n -5 /etc/X11/xinit/xinitrc > /home/cypher/.xinitrc
 printf "nitrogen --restore &\npicom &\nexec xmonad" >> /home/cypher/.xinitrc
 systemctl enable NetworkManager
+printf "Section \"InputClass\"\n\tIdentifier \"system-keybaord\"\n\tMatchIsKeyboard \"on\"\n\tOption \"XkbLayout\" \"de\"\nEndSection" > /etc/X11/xorg.conf.d/00-keyboard.conf
 exit
