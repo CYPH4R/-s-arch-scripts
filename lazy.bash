@@ -30,7 +30,7 @@ sed -i "s/# Defaults!REBOOT !log_output/# Defaults!REBOOT !log_output\nDefaults 
 #Yay Download
 git clone https://aur.archlinux.org/yay-git.git /home/cypher/yay-git
 chmod -v a+rwx /home/cypher/yay-git
-su -c "bash yay-installer.bash" cypher &
+su -c "bash yay-installer.bash" cypher
 #Making X11/xorg config
 head -n -5 /etc/X11/xinit/xinitrc > /home/cypher/.xinitrc
 printf "nitrogen --restore &\npicom &\nexec xmonad" >> /home/cypher/.xinitrc
