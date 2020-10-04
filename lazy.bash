@@ -35,7 +35,7 @@ su -c "bash yay-installer.bash" cypher
 head -n -5 /etc/X11/xinit/xinitrc > /home/cypher/.xinitrc
 printf "nitrogen --restore &\npicom &\nexec xmonad" >> /home/cypher/.xinitrc
 printf "Section \"InputClass\"\n\tIdentifier \"system-keybaord\"\n\tMatchIsKeyboard \"on\"\n\tOption \"XkbLayout\" \"de\"\nEndSection" > /etc/X11/xorg.conf.d/00-keyboard.conf
-git clone https://github.com/CYPH4R/.config .config
+git clone https://github.com/CYPH4R/.config /home/cypher/.config
 #Enable Automatic Networking
 systemctl enable dhcpcd.service
 #change sudoers back to use Password
