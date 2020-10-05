@@ -31,9 +31,9 @@ sed -i "s/# Defaults!REBOOT !log_output/# Defaults!REBOOT !log_output\nDefaults 
 pacman -S - < packages.txt
 #Yay Download
 git clone https://aur.archlinux.org/yay-git.git /home/cypher/yay-git
-chmod +x /home/cypher/yay-git
+chmod ugo+rwx /home/cypher/yay-git
 su -c "cd /home/cypher/yay-git; makepkg -si" cypher
-#Installing AUR packages
+#Instaling Yay packages
 yay -S st
 #Making X11/xorg config
 head -n -5 /etc/X11/xinit/xinitrc > /home/cypher/.xinitrc
