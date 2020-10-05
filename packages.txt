@@ -1,4 +1,5 @@
-basebase-devellinux
+basebase-devel
+linux
 linux-firmware
 vim
 git
