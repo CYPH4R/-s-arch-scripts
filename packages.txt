@@ -1,4 +1,5 @@
-basebase-devel
+base
+base-devel
 linux
 linux-firmware
 vim
