@@ -1,11 +1,5 @@
-base
-base-devel
-linux
-linux-firmware
 vim
 git
-grub
-sudo
 xorg
 xorg-xinit
 nvidia
