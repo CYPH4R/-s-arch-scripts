@@ -33,6 +33,8 @@ pacman -S - < packages.txt
 git clone https://aur.archlinux.org/yay-git.git /home/cypher/yay-git
 chmod +x /home/cypher/yay-git
 su -c "cd /home/cypher/yay-git; makepkg -si" cypher
+#Installing AUR packages
+yay -S st
 #Making X11/xorg config
 head -n -5 /etc/X11/xinit/xinitrc > /home/cypher/.xinitrc
 printf "nitrogen --restore &\npicom &\nexec xmonad" >> /home/cypher/.xinitrc
