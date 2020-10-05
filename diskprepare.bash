@@ -6,7 +6,7 @@
 parted -s /dev/sda mklabel msdos mkpart primary ext4 0% 100% set 1 boot on
 mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt
-pacstrap /mnt < packages.txt
+pacstrap /mnt - < packages.txt
 genfstab -U /mnt >> /mnt/etc/fstab
 cp ./lazy.bash /mnt/lazy.bash
 cp ./yay-installer.bash /mnt/yay-installer.bash
