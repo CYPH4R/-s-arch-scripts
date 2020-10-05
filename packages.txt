@@ -6,7 +6,6 @@ nvidia
 nitrogen
 picom
 xmonad
-firefox
 dhcpcd
 go
 curl
