@@ -1,0 +1,16 @@
+basebase-devellinux
+linux-firmware
+vim
+git
+grub
+sudo
+xorg
+xorg-xinit
+nvidia
+nitrogen
+picom
+xmonad
+firefox
+dhcpcd
+go
+curl
