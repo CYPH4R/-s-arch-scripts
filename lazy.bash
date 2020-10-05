@@ -28,7 +28,7 @@ passwd cypher
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -i "s/# Defaults!REBOOT !log_output/# Defaults!REBOOT !log_output\nDefaults insults/" /etc/sudoers
 #Install Pacman packages
-
+pacman -S - < packages.txt
 #Yay Download
 git clone https://aur.archlinux.org/yay-git.git /home/cypher/yay-git
 chmod -v a+rwx /home/cypher/yay-git
