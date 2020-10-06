@@ -7,6 +7,7 @@ nitrogen
 picom
 xmonad
 xmonad-contrib
+wpa_supplicant
 dhclient
 go
 curl
