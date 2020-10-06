@@ -6,6 +6,7 @@ nvidia
 nitrogen
 picom
 xmonad
+xmonad-contrib
 dhcpcd
 go
 curl
