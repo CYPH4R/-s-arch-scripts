@@ -41,7 +41,7 @@ printf "nitrogen --restore &\npicom &\nexec xmonad" >> /home/cypher/.xinitrc
 printf "Section \"InputClass\"\n\tIdentifier \"system-keybaord\"\n\tMatchIsKeyboard \"on\"\n\tOption \"XkbLayout\" \"de\"\nEndSection" > /etc/X11/xorg.conf.d/00-keyboard.conf
 su -c "git clone https://github.com/CYPH4R/.config /home/cypher/.config" cypher
 #Enable Automatic Networking
-systemctl enable dhcpcd.service
+systemctl enable dhclient.service
 #change sudoers back to use Password
 sed -i "s/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/" /etc/sudoers
 sed -i "s/%wheel ALL=(ALL) NOPASSWD: ALL/# %wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
