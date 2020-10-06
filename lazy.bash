@@ -34,7 +34,7 @@ git clone https://aur.archlinux.org/yay-git.git /home/cypher/yay-git
 chmod ugo+rwx /home/cypher/yay-git
 su -c "cd /home/cypher/yay-git; makepkg -si" cypher
 #Instaling Yay packages
-su -c "yay -S st surf" cypher
+su -c "yay -S st surf thinkfinger" cypher
 #Making X11/xorg config
 head -n -5 /etc/X11/xinit/xinitrc > /home/cypher/.xinitrc
 printf "nitrogen --restore &\npicom &\nexec xmonad" >> /home/cypher/.xinitrc
